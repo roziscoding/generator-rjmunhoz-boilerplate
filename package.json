@@ -1,0 +1,26 @@
+{
+  "name": "generator-rjmunhoz-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple boilerplate generator with stuff I use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rjmunhoz",
+    "backend",
+    "boilerplate",
+    "yeoman"
+  ],
+  "author": "Rogério Munhoz <roz@rjmunhoz.me>",
+  "license": "GPL-3.0",
+  "files": [
+    "app"
+  ],
+  "dependencies": {
+    "change-case": "^4.1.0",
+    "git-config-path": "^2.0.0",
+    "parse-git-config": "^3.0.0",
+    "yeoman-generator": "^4.3.0"
+  }
+}
