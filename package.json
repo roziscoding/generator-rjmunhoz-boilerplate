@@ -23,5 +23,9 @@
     "git-config-path": "^2.0.0",
     "parse-git-config": "^3.0.0",
     "yeoman-generator": "^4.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjmunhoz/generator-rjmunhoz-boilerplate"
   }
 }
