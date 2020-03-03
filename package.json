@@ -14,10 +14,6 @@
   ],
   "author": "Rogério Munhoz <roz@rjmunhoz.me>",
   "license": "GPL-3.0",
-  "files": [
-    "generators",
-    "utils"
-  ],
   "dependencies": {
     "change-case": "^4.1.0",
     "git-config-path": "^2.0.0",
@@ -27,5 +23,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rjmunhoz/generator-rjmunhoz-boilerplate"
-  }
+  },
+  "files": [
+    "generators/**/*",
+    "utils/**/*"
+  ]
 }
