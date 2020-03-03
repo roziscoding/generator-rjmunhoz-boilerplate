@@ -15,7 +15,8 @@
   "author": "Rogério Munhoz <roz@rjmunhoz.me>",
   "license": "GPL-3.0",
   "files": [
-    "app"
+    "generators",
+    "utils"
   ],
   "dependencies": {
     "change-case": "^4.1.0",
