@@ -1,3 +1,4 @@
+const path = require('path')
 const changeCase = require('change-case')
 const Generator = require('yeoman-generator')
 const gitUserInfo = require('../../utils/git-user-info')()
@@ -34,7 +35,7 @@ const _arguments = {
   projectName: {
     type: 'input',
     required: false,
-    default: (context) => context.appname
+    default: (context) => path.basename(process.cwd())
   }
 }
 
@@ -81,13 +82,16 @@ class RjmunhozGenerator extends Generator {
 
     const files = [
       'test/not-implemented.ts',
-      '.editorconfig',
-      '.eslintignore',
-      '.eslintrc.js',
-      '.gitignore',
       'Dockerfile',
       'package.json',
       'tsconfig.json'
+    ]
+
+    const dotFiles = [
+      'editorconfig',
+      'eslintignore',
+      'eslintrc.js',
+      'gitignore'
     ]
 
     for (const file of files) {
@@ -95,6 +99,13 @@ class RjmunhozGenerator extends Generator {
         this.templatePath(file),
         this.destinationPath(file),
         context
+      )
+    }
+
+    for (const dotFile of dotFiles) {
+      this.fs.copyTpl(
+        this.templatePath(dotFile),
+        this.destinationPath(`.${dotFile}`)
       )
     }
 
