@@ -91,7 +91,8 @@ class RjmunhozGenerator extends Generator {
       'editorconfig',
       'eslintignore',
       'eslintrc.js',
-      'gitignore'
+      'gitignore',
+      'prettierrc'
     ]
 
     for (const file of files) {
