@@ -7,9 +7,11 @@
     "test": "mocha -b -r ts-node/register test/**/*.ts",
     "build": "tsc",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
-    "build:clean": "npm run build && npm run build",
+    "build:clean": "npm run clean && npm run build",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "start": "node dist/index.js",
+    "start:dev": "tsnd --rs ./src/index.ts"
   },
   "author": "<%= authorName %> <<%= authorEmail %>>",
   "license": "GPL-3.0",
