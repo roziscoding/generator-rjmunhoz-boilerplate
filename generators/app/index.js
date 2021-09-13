@@ -23,11 +23,6 @@ const options = {
     type: 'confirm',
     default: false,
     message: 'Enable typescript declaration files?'
-  },
-  install: {
-    type: 'confirm',
-    default: true,
-    message: 'Install dependecies with npm at the end?'
   }
 }
 
@@ -81,6 +76,11 @@ class RjmunhozGenerator extends Generator {
     }
 
     const files = [
+      '.github/workflows/lint-and-test.yml',
+      '.husky/commit-msg',
+      '.husky/prepare-commit-msg',
+      '.husky/pre-commit',
+      '.husky/pre-push',
       'test/not-implemented.ts',
       'Dockerfile',
       'package.json',
@@ -120,10 +120,6 @@ class RjmunhozGenerator extends Generator {
 
       this.fs.extendJSON(this.destinationPath('tsconfig.json'), tsconfig)
     }
-  }
-
-  async install () {
-    if (this.values.install) this.npmInstall()
   }
 }
 

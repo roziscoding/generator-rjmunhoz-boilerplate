@@ -23,11 +23,6 @@ const options = {
     type: 'confirm',
     default: true,
     message: 'Enable typescript declaration files?'
-  },
-  install: {
-    type: 'confirm',
-    default: true,
-    message: 'Install dependecies with npm at the end?'
   }
 }
 
@@ -125,10 +120,6 @@ class RjmunhozGenerator extends Generator {
 
       this.fs.extendJSON(this.destinationPath('tsconfig.json'), tsconfig)
     }
-  }
-
-  async install () {
-    if (this.values.install) this.npmInstall()
   }
 }
 
