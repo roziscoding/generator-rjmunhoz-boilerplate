@@ -43,7 +43,7 @@ function stringToType (type) {
   return stringTypeMap[type] || String
 }
 
-class RjmunhozGenerator extends Generator {
+class AppGenerator extends Generator {
   constructor (args, opts) {
     super(args, opts)
     for (const [argumentName, argument] of Object.entries(_arguments)) {
@@ -123,4 +123,4 @@ class RjmunhozGenerator extends Generator {
   }
 }
 
-module.exports = RjmunhozGenerator
+module.exports = AppGenerator
