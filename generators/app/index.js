@@ -84,7 +84,8 @@ class AppGenerator extends Generator {
       'test/not-implemented.ts',
       'Dockerfile',
       'package.json',
-      'tsconfig.json'
+      'tsconfig.json',
+      'commitlint.config.js'
     ]
 
     const dotFiles = [
