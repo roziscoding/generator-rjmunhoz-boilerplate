@@ -10,7 +10,7 @@ export const appFactory = expresso((app) => {
     openApiInfo: {
       info: {
         title: '<%= apiName %>',
-        version: '<&&= apiVersion >',
+        version: '<%= apiVersion %>',
         description: '<%= apiDescription %>',
         contact: {
           name: '<%= authorName %>',
