@@ -77,6 +77,7 @@ class AppGenerator extends Generator {
 
     const files = [
       '.github/workflows/lint-and-test.yml',
+      '.github/workflows/release.yml',
       '.husky/commit-msg',
       '.husky/prepare-commit-msg',
       '.husky/pre-commit',
