@@ -23,6 +23,11 @@ export const appFactory = expresso((app) => {
       },
       openapi: '3.0.1'
     },
-    routing: routes
+    routing: routes,
+    documentation: {
+      ui: {
+        endpoint: '/docs'
+      }
+    }
   })
 })
